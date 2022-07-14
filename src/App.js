@@ -15,9 +15,12 @@ function App() {
         <img src="../images/raccoon1.png" alt="raccoon" className="logo" />
       </nav>
       <AppContext.Provider value={{ board, setBoard }}>
+        <div className="game">
       <Board />
       <Keyboard />
+      </div>
       </AppContext.Provider>
+      
     </div>
   );
 }
