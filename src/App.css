@@ -1,5 +1,6 @@
-App {
+.App {
 
+ 
   text-align: center;
 
   background-color: #121212;
@@ -13,6 +14,7 @@ App {
   color: white;
 
 }
+
 
 
 
@@ -51,7 +53,7 @@ nav h1 {
 
   margin: 0;
 
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Edu NSW ACT Foundation', sans-serif;
 
   color: white;
 

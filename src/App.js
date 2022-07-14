@@ -4,9 +4,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
- 
-      </header>
+    <nav>
+    <img src='../images/raccoon1.png' alt='raccoon'  className='navimg'/>
+    <h1>krodyle    </h1>
+    </nav>
     </div>
   );
 }
