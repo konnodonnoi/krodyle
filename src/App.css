@@ -15,8 +15,19 @@
 
 }
 
+.logo {
+  margin-left: auto;
+  margin-right:auto;
 
+  transform: rotate(0deg);
+  transition: transform 250ms linear;
+  cursor: pointer;
+}
 
+.logo:hover,
+.logo:focus {
+  transform: rotate(-180deg);
+}
 
 
 body {
@@ -36,7 +47,7 @@ nav {
 
   width: 100%;
 
-  margin: 0;
+justify-content: space-around;
 
   border-bottom: 1px solid grey;
 
@@ -57,7 +68,7 @@ nav h1 {
 
   color: white;
 
-  font-size: 45px;
+  font-size: 50px;
 
 }
 
@@ -132,7 +143,7 @@ nav h1 {
 
   color: white;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Edu NSW ACT Foundation', sans-serif;
 
 }
 
@@ -141,7 +152,7 @@ nav h1 {
 
 #correct {
 
-  background-color: #528d4e;
+  background-color: #3ad82f;
 
 }
 
@@ -150,7 +161,7 @@ nav h1 {
 
 #almost {
 
-  background-color: #b49f39;
+  background-color: #c4ab31;
 
 }
 
@@ -159,7 +170,7 @@ nav h1 {
 
 #error {
 
-  background-color: #3a393c;
+  background-color: #3a393b;
 
 }
 

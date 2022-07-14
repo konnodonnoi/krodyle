@@ -1,13 +1,15 @@
-
-import './App.css';
+import "./App.css";
+import Board from "./components/Board";
+import Keyboard from "./components/Keyboard";
 
 function App() {
   return (
     <div className="App">
-    <nav>
-    <img src='../images/raccoon1.png' alt='raccoon'  className='navimg'/>
-    <h1>krodyle    </h1>
-    </nav>
+      <nav>
+        <img src="../images/raccoon1.png" alt="raccoon" className="logo" />
+      </nav>
+      <Board />
+      <Keyboard />
     </div>
   );
 }
