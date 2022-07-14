@@ -1,6 +1,4 @@
 .App {
-
- 
   text-align: center;
 
   background-color: #121212;
@@ -9,15 +7,12 @@
 
   height: 100vh;
 
-  /* display: flex; */
-
   color: white;
-
 }
 
 .logo {
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
 
   transform: rotate(0deg);
   transition: transform 250ms linear;
@@ -29,70 +24,51 @@
   transform: rotate(-180deg);
 }
 
-
 body {
-
   padding: 0%;
 
   margin: 0;
-
 }
 
-
-
-
 nav {
-
   height: 60px;
 
   width: 100%;
 
-justify-content: space-around;
+  justify-content: space-around;
 
   border-bottom: 1px solid grey;
 
   display: grid;
 
   place-items: center;
-
 }
 
-
-
-
 nav h1 {
-
   margin: 0;
 
-  font-family: 'Edu NSW ACT Foundation', sans-serif;
+  font-family: "Edu NSW ACT Foundation", sans-serif;
 
   color: white;
 
   font-size: 50px;
-
 }
 
 .game {
+  width: 100vw;
 
-    width: 100vw;
+  height: calc(100vh - 170px);
 
-  height: calc(100vh - 170px); 
-
-  display: flex; 
+  display: flex;
 
   align-items: center;
 
   padding-top: 50px;
 
-  flex-direction: column; 
-
+  flex-direction: column;
 }
 
-
-
-
 .board {
-
   width: 450px;
 
   height: 550px;
@@ -102,14 +78,9 @@ nav h1 {
   display: flex;
 
   flex-direction: column;
-
 }
 
-
-
-
 .row {
-
   flex: 33%;
 
   display: flex;
@@ -117,14 +88,9 @@ nav h1 {
   flex-direction: row;
 
   margin: 5px;
-
 }
 
-
-
-
 .letter {
-
   flex: 33%;
 
   height: 100%;
@@ -143,55 +109,30 @@ nav h1 {
 
   color: white;
 
-  font-family: 'Edu NSW ACT Foundation', sans-serif;
-
+  font-family: "Edu NSW ACT Foundation", sans-serif;
 }
-
-
-
 
 #correct {
-
   background-color: #3ad82f;
-
 }
-
-
-
 
 #almost {
-
   background-color: #c4ab31;
-
 }
-
-
-
 
 #error {
-
   background-color: #3a393b;
-
 }
 
-
-
-
 .keyboard {
-
   width: 700px;
 
   height: 300px;
 
   margin-top: 50px;
-
 }
 
-
-
-
 .line1 {
-
   flex: 33%;
 
   display: flex;
@@ -203,11 +144,9 @@ nav h1 {
   justify-content: center;
 
   margin: 5px;
-
 }
 
 .line2 {
-
   flex: 33%;
 
   display: flex;
@@ -217,11 +156,9 @@ nav h1 {
   justify-content: center;
 
   margin: 5px;
-
 }
 
 .line3 {
-
   flex: 33%;
 
   display: flex;
@@ -231,14 +168,9 @@ nav h1 {
   justify-content: center;
 
   margin: 5px;
-
 }
 
-
-
-
 .key {
-
   width: 50px;
 
   height: 70px;
@@ -257,23 +189,15 @@ nav h1 {
 
   color: white;
 
-  font-family: 'Edu NSW ACT Foundation', sans-serif;
+  font-family: "Edu NSW ACT Foundation", sans-serif;
 
   cursor: pointer;
-
 }
 
-
-
-
 #big {
-
   width: 100px;
-
 }
 
 #disabled {
-
   background-color: #3a393c;
-
 }
