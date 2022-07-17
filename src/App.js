@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
-      setCorrectWord(words.dailyWord);
+      setCorrectWord(words.dailyWord.toUpperCase());
     });
   }, []);
 
