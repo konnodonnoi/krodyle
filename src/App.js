@@ -53,7 +53,7 @@ function App() {
     if (wordSet.has(currWord.toLowerCase())) {
       setCurrAttempt({ attempt: currAttempt.attempt + 1, letterPos: 0 });
     } else {
-      alert("word not found... new word discovered maybe?");
+      alert("word not found");
     }
 
     if (currWord === correctWord) {
