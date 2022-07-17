@@ -3,6 +3,7 @@ import Board from "./components/Board";
 import Keyboard from "./components/Keyboard";
 import { createContext, useEffect, useState } from "react";
 import { boardDefault, generateWordSet } from "./components/Words";
+import GameEnd from "./components/GameEnd";
 
 export const AppContext = createContext();
 
@@ -10,14 +11,21 @@ function App() {
   const [board, setBoard] = useState(boardDefault);
   const [currAttempt, setCurrAttempt] = useState({ attempt: 0, letterPos: 0 });
   const [wordSet, setWordSet] = useState(new Set());
-  const [disabledLetters, setDisabledLetters] = useState([])
-  const correctWord = "RIGHT";
+  const [disabledLetters, setDisabledLetters] = useState([]);
+  const [correctWord, setCorrectWord] = useState("")
+  const [gameEnd, setGameEnd] = useState({
+    gameEnd: false,
+    guessedWord: false,
+  });
+
 
   useEffect(() => {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
+      setCorrectWord(words.dailyWord);
     });
   }, []);
+
   const onSelectLetter = (keyval) => {
     if (currAttempt.letterPos > 4) return;
     const newBox = [...board];
@@ -45,15 +53,16 @@ function App() {
     if (wordSet.has(currWord.toLowerCase())) {
       setCurrAttempt({ attempt: currAttempt.attempt + 1, letterPos: 0 });
     } else {
-      alert ("word not found... new word discovered maybe?")
+      alert("word not found... new word discovered maybe?");
     }
 
     if (currWord === correctWord) {
-      alert ("yay! you got the word correct")
+      setGameEnd({gameEnd : true, guessedWord : true})
+      return;
     }
 
-
-  
+    if (currAttempt.attempt === 5)
+    setGameEnd({gameEnd : true, guessedWord : false})
   };
   return (
     <div className="App">
@@ -71,12 +80,14 @@ function App() {
           onEnter,
           correctWord,
           disabledLetters,
-          setDisabledLetters
+          setDisabledLetters,
+          gameEnd,
+          setGameEnd,
         }}
       >
         <div className="game">
           <Board />
-          <Keyboard />
+          {gameEnd.gameEnd ? <GameEnd /> : <Keyboard />}
         </div>
       </AppContext.Provider>
     </div>
