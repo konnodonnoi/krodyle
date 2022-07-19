@@ -141,3 +141,12 @@ nav h1 {
 #disabled {
   background-color: #1d1d1d;
 }
+
+
+/* @media screen and (max-width: $desktop) {
+  $desktop: 1200px;
+  $laptop: 1024px;
+  $tablet: 768px;
+  $phone: 480px;
+  
+} */
