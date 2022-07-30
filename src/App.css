@@ -1,3 +1,14 @@
+:root {
+  --desktop: 1200px;
+  --laptop: 1024px;
+  --tablet: 768px;
+  --phone: 480px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
   background-color: #121212;
@@ -20,7 +31,7 @@
 }
 
 body {
-  padding: 0%;
+  padding: 0;
   margin: 0;
 }
 
@@ -50,11 +61,17 @@ nav h1 {
 }
 
 .board {
-  width: 450px;
+  width: 100%;
   height: 550px;
   /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width: 480px) {
+  .board {
+    max-width: 450px;
+  }
 }
 
 .row {
@@ -90,7 +107,7 @@ nav h1 {
 }
 
 .keyboard {
-  width: 700px;
+  width: 100%;
   height: 200px;
   margin-top: 50px;
 }
@@ -121,8 +138,8 @@ nav h1 {
 }
 
 .key {
-  width: 50px;
-  height: 70px;
+  width: 25px;
+  height: 35px;
   margin: 5px;
   border-radius: 4px;
   display: grid;
@@ -134,6 +151,13 @@ nav h1 {
   cursor: pointer;
 }
 
+@media screen and (min-width: 1024px) {
+  .key {
+    width: 50px;
+    height: 70px;
+  }
+}
+
 #big {
   width: 100px;
 }
@@ -141,7 +165,6 @@ nav h1 {
 #disabled {
   background-color: #1d1d1d;
 }
-
 
 /* @media screen and (max-width: $desktop) {
   $desktop: 1200px;
